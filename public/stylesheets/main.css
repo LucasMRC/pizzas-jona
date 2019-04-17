@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.form-control {
+    width: 95% !important;
+}
+input {
+    margin: .5rem auto;
+}
+.button {
+    width: 45%;
+}
+.orden, .card {
+    background-color: gray;
+}
+
+.nuevo {
+    width: 35%;
+}
+.button-form {
+    display: inline-block;
+}
+.historic-order {
+    list-style-type: none;
+    text-align: center;
+}
+
+/*.footer {
+    color: #FFF;
+    padding: 1.2rem;
+    text-align: center;
+    width: 100%;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+}*/

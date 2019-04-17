@@ -1,0 +1,20 @@
+{
+  "name": "pizzas_jona",
+  "version": "1.0.0",
+  "description": "Base de datos para la pizzería de los pibes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Reyna Córdoba",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "date-and-time": "^0.6.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.4",
+    "nodemon": "^1.18.9"
+  }
+}

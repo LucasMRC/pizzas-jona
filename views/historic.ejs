@@ -1,0 +1,107 @@
+<% include partials/header %>
+
+
+    <h1>Historial de Órdenes</h1>
+
+    <div class="container">
+        <% if (!historic.orders || historic.orders.length < 1) { %>
+            <div class=" container">
+                <div class="jumbotron">
+                    <h2>No hay órdenes en el historial aún.</h2>
+                    <h4>Hay que conseguir clientes!</h4>
+                </div>
+            </div>
+        <% } else { %>
+            <div class=" container">
+                <div class="jumbotron">
+                    <h4 class="text-center">Órdenes del día de hoy</h4>
+                    <div class="row">
+                        <% historic.orders.forEach(order => { %>
+                            <% if (order.date.toDateString() === new Date().toDateString()) { %>
+                                <div class="card col-3 m-2 p-2 border rounded text-light">
+                                    <ul class="historic-order">
+                                        <li><%= order.client %></li>
+                                        <li><%= order.wants %></li>
+                                        <li><%= order.adress %></li>
+                                        <li><%= order.dateSp %></li>
+                                        <li><%= order.date.toDateString() %></li>
+                                        <li><%= order.date.getHours() + ':' + order.date.getMinutes() %></li>
+                                    </ul>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+
+        <h4>Busca pedidos por fecha:</h4>
+
+        <form id="date-form">
+            <select name="day" required>
+                <option value="" disabled selected hidden>Día</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select name="month" required>
+                <option value="" disabled selected hidden>Mes</option>
+                <option value="0">Enero</option>
+                <option value="1">Febrero</option>
+                <option value="2">Marzo</option>
+                <option value="3">Abril</option>
+                <option value="4">Mayo</option>
+                <option value="5">Junio</option>
+                <option value="6">Julio</option>
+                <option value="7">Agosto</option>
+                <option value="8">Septiembre</option>
+                <option value="9">Octubre</option>
+                <option value="10">Noviembre</option>
+                <option value="11">Diciembre</option>
+            </select>
+            <select name="year" disabled>
+                <option value="2019" disabled selected hidden>2019</option>
+            </selected>
+        </form>
+
+
+
+        <div class="historicOrders">
+
+
+
+        </div>
+
+    </div>
+
+
+
+<% include partials/footer %>
